@@ -1,0 +1,10 @@
+________SKY AIRLINES__________
+______TICKET________
+____________________
+Customer ID1
+Customer NAMEsjx
+Customer gendermale
+	 Description
+
+destination		MUMBAI
+flight cost :		10000
