@@ -45,7 +45,7 @@ class Registration{
     public:
         static int choice;
         int choice1;
-        int back;
+        int back,quantity;
         static float charges;
 
         void flight(){
@@ -75,18 +75,21 @@ class Registration{
                     cout<<"\n select the flight: ";
                     cin>>choice1;
 
+                    cout<<"enter the quantity: ";
+                    cin>>quantity;
+
                     switch(choice1){
-                        case 1: charges = 10000;
+                        case 1: charges = 10000*quantity;
                         cout<<"You have successfully booked th flight MUM 4239\n"<<endl;
                         cout<<"You can go back to menu and take the ticket:\n"<<endl;
                         break;
                         case 2:
-                        charges = 14000;
+                        charges = 14000*quantity;
                         cout<<"You have successfully booked th flight MUM 3239\n"<<endl;
                         cout<<"You can go back to menu and take the ticket:\n"<<endl;
                         break; 
                         case 3:
-                        charges = 8000;
+                        charges = 8000*quantity;
                         cout<<"You have successfully booked th flight MUM 2239\n"<<endl;
                         cout<<"You can go back to menu and take the ticket:\n"<<endl;
                         break;
@@ -119,19 +122,21 @@ class Registration{
 
                     cout<<"\n select the flight: ";
                     cin>>choice1;
+                    cout<<"enter the quantity: ";
+                    cin>>quantity;
 
                     switch(choice1){
-                        case 1: charges = 5000;
+                        case 1: charges = 5000*quantity;
                         cout<<"You have successfully booked thE flight DELH 4156\n"<<endl;
                         cout<<"You can go back to menu and take the ticket:\n"<<endl;
                         break;
                         case 2:
-                        charges = 9000;
+                        charges = 9000*quantity;
                         cout<<"You have successfully booked the flight DELH 3156\n"<<endl;
                         cout<<"You can go back to menu and take the ticket:\n"<<endl;
                         break; 
                         case 3:
-                        charges = 3000;
+                        charges = 3000*quantity;
                         cout<<"You have successfully booked the flight DELH 2156\n"<<endl;
                         cout<<"You can go back to menu and take the ticket:\n"<<endl;
                         break;
@@ -164,19 +169,21 @@ class Registration{
 
                     cout<<"\n select the flight: ";
                     cin>>choice1;
+                    cout<<"\nEnter Quantity: ";
+                    cin>>quantity;
 
                     switch(choice1){
-                        case 1: charges = 5000;
+                        case 1: charges = 5000*quantity;
                         cout<<"You have successfully booked thE flight DELH 4156\n"<<endl;
                         cout<<"You can go back to menu and take the ticket:\n"<<endl;
                         break;
                         case 2:
-                        charges = 9000;
+                        charges = 9000*quantity;
                         cout<<"You have successfully booked the flight DELH 3156\n"<<endl;
                         cout<<"You can go back to menu and take the ticket:\n"<<endl;
                         break; 
                         case 3:
-                        charges = 3000;                                                             //38:42
+                        charges = 3000*quantity;                                                    //38:42
                         cout<<"You have successfully booked the flight DELH 2156\n"<<endl;
                         cout<<"You can go back to menu and take the ticket:\n"<<endl;
                         break;
@@ -214,9 +221,10 @@ class ticket : public Registration,Details
             string destinations=" ";
             ofstream outf("records.txt");
             {
-                outf<<"________SKY AIRLINES__________"<<endl;
-                outf<<"______TICKET________"<<endl;
-                outf<<"____________________"<<endl;
+                outf<<"\t____________SKY AIRLINES__________"<<endl;
+                outf<<"\t\t__________TICKET________"<<endl;
+                outf<<"\t\t\t_________"<<endl;
+                outf<<"\t\t\t\t_____"<<endl;
 
                 outf<<"Customer ID"<<Details::cID<<endl;
                 outf<<"Customer NAME"<<Details::name<<endl;
@@ -256,19 +264,19 @@ void mainmenu(){
     int lchoice;
     int schoice;
     int back;
+    cout<<endl;
+    cout<<"\t         ~ SKY Airlines ~"<<endl;
+    cout<<"\t    ________ Main Menu _______"<<endl;
 
-    cout<<"\t               SKY Airlines\n"<<endl;
-    cout<<"\t        ________Main Menu______"<<endl;
-
-    cout<<"\t________________________________"<<endl;
-    cout<<"\t\t\t\t\t\t\t|"<<endl;
-
-    cout<<"\t\t Press 1 to add Customer Details             \t"<<endl;
-    cout<<"\t\t Press 2 to for Flight Registration             \t"<<endl;
-    cout<<"\t\t Press 3 to  for Tickit And Charges          \t"<<endl;
-    cout<<"\t\t Press 4  to Exit                             \t"<<endl;
-
-    cout<<"enter Choice  :";
+    cout<<"\t\t    __________"<<endl;
+    cout<<"|\t\t\t\t\t\t      |"<<endl;
+    // cout<<"<<endl;
+    cout<<"|\t Press 1 to add Customer Details              |\t"<<endl;
+    cout<<"|\t Press 2 to for Flight Registration           |\t"<<endl;
+    cout<<"|\t Press 3 to  for Tickit And Charges           |\t"<<endl;
+    cout<<"|\t Press 4  to Exit                             |\t"<<endl;
+    
+    cout<<"\nEnter Choice  :";
     cin>>lchoice;
 
     Details d;
@@ -279,7 +287,7 @@ void mainmenu(){
         case 1:{
             cout<<"____________Customers___________\n"<<endl;
             d.information();
-            cout<<"press 1 to go back to the main menu ";
+            cout<<"Press 1 to go back to the main menu ";
             cin>>back;
 
             if(back ==1){
@@ -291,7 +299,7 @@ void mainmenu(){
             break;
         }
         case 2:
-            cout<<"__________Book A Flight using a system___________\n"<<endl;
+            cout<<"___________Book A Flight using a system___________\n"<<endl;
             r.flight();
             break;
         case 3:
