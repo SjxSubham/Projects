@@ -340,6 +340,6 @@ void mainmenu(){
 int main(){
     Management Mobj;
     Loadingbar();
-    system("color 0F")
+    system("color 0F");
     return 0;
 }
