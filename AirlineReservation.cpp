@@ -1,7 +1,9 @@
 //                                         ..................... Airline  Reservation System ........................                                //
 #include<iostream>
+#include"loading.h"
 #include<fstream>
 #include<iomanip>
+#include<windows.h>
 using namespace std;
 
 void mainmenu();
@@ -41,9 +43,9 @@ int Details::cID;
 string Details::name;
 string Details::gender;
 
-// class Registration{
-//     public:
-//         static int choice;
+class Registration{
+    public:
+        static int choice;
         int choice1;
         int back,quantity;
         static float charges;
@@ -210,8 +212,8 @@ string Details::gender;
         }
         }
 };
-// float Registration::charges;
-// int Registration::choice;
+float Registration::charges;
+int Registration::choice;
 
 
 class ticket : public Registration,Details

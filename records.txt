@@ -1,10 +1,11 @@
-________SKY AIRLINES__________
-______TICKET________
-____________________
-Customer ID1
+	____________SKY AIRLINES__________
+		__________TICKET________
+			_________
+				_____
+Customer ID456
 Customer NAMEsjx
-Customer gendermale
+Customer genderm
 	 Description
 
 destination		MUMBAI
-flight cost :		10000
+flight cost :		42000
