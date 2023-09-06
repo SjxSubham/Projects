@@ -1,6 +1,6 @@
 //                                         ..................... Airline  Reservation System ........................                                //
 #include<iostream>
-#include"loading.h"
+//#include"loading.h"
 #include<fstream>
 #include<iomanip>
 #include<windows.h>
@@ -41,7 +41,7 @@ class Details{
 
 int Details::cID;
 string Details::name;
-string Details::gender;
+// string Details::gender;
 
 class Registration{
     public:
@@ -211,9 +211,9 @@ class Registration{
             }
         }
         }
-};
-float Registration::charges;
-int Registration::choice;
+// };
+// float Registration::charges;
+// int Registration::choice;
 
 
 class ticket : public Registration,Details
@@ -262,9 +262,9 @@ class ticket : public Registration,Details
             ifs.close();
         }
 };
-void mainmenu(){
-    int lchoice;
-    int schoice;
+// void mainmenu(){
+//     int lchoice;
+//     int schoice;
     int back;
     cout<<endl;
     cout<<"\t         ~ SKY Airlines ~"<<endl;
